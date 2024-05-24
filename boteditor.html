@@ -18,10 +18,28 @@
     <h1 style="font-family: 'Montserrat', sans-serif; font-weight: bold;">
       MvM Bot Editor
     </h1>
+    <p>
+      Bot Details.
+    </p>
     <label for="textbox">Bot ID    : </label>
     <input type="text" id="bot_id" name="bot_id">
+    <br>
     <label for="textbox">Bot Name    : </label>
     <input type="text" id="bot_name" name="bot_name">
+    <br>
+    <span id="output"></span>
+
+    <script>
+    var firstNameInput = document.getElementById("first-name");
+    var lastNameInput = document.getElementById("last-name");
+    var outputSpan = document.getElementById("output");
+    function updateOutput() {
+        outputSpan.textContent = firstNameInput.value + " " + lastNameInput.value;
+    }
+      
+    firstNameInput.addEventListener("input", updateOutput);
+    lastNameInput.addEventListener("input", updateOutput);
+</script>
   </body>
 <footer style="font-size: 8px; font-family: 'Montserrat', sans-serif; font-weight: italic;">
   This website is made by CentiCodes. Version 1.0.
